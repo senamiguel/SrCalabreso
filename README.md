@@ -1,25 +1,94 @@
-# Laravel + React Starter Kit
+# SrCalabreso
 
-## Introduction
+## Descrição
 
-Our React starter kit provides a robust, modern starting point for building Laravel applications with a React frontend using [Inertia](https://inertiajs.com).
+SrCalabreso é um projeto fullstack utilizando Laravel no backend e React no frontend, integrados via Inertia.js. O objetivo é fornecer uma base moderna, robusta e produtiva para o desenvolvimento de aplicações web, aproveitando o melhor das duas tecnologias.
 
-Inertia allows you to build modern, single-page React applications using classic server-side routing and controllers. This lets you enjoy the frontend power of React combined with the incredible backend productivity of Laravel and lightning-fast Vite compilation.
+## Tecnologias Utilizadas
 
-This React starter kit utilizes React 19, TypeScript, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
+- **Backend:** Laravel (PHP)
+- **Frontend:** React 19, TypeScript
+- **Estilização:** Tailwind CSS
+- **Componentes UI:** shadcn/ui, radix-ui
+- **Build:** Vite
+- **Autenticação:** Laravel Sanctum
 
-## Official Documentation
+## Instalação
 
-Documentation for all Laravel starter kits can be found on the [Laravel website](https://laravel.com/docs/starter-kits).
+### Pré-requisitos
 
-## Contributing
+- PHP >= 8.1
+- Composer
+- Node.js >= 18
+- npm ou yarn
+- Banco de dados (MySQL, PostgreSQL, SQLite, etc.)
 
-Thank you for considering contributing to our starter kit! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Passos
 
-## Code of Conduct
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/SrCalabreso.git
+   cd SrCalabreso
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. **Instale as dependências do backend:**
+   ```bash
+   composer install
+   ```
 
-## License
+3. **Instale as dependências do frontend:**
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
 
-The Laravel + React starter kit is open-sourced software licensed under the MIT license.
+4. **Copie o arquivo de ambiente e configure:**
+   ```bash
+   cp .env.example .env
+   ```
+   Edite o arquivo `.env` com as configurações do seu banco de dados e outras variáveis.
+
+5. **Gere a chave da aplicação:**
+   ```bash
+   php artisan key:generate
+   ```
+
+6. **Execute as migrações:**
+   ```bash
+   php artisan migrate
+   ```
+
+7. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   php artisan serve
+   ```
+
+8. **Inicie o frontend:**
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+## Estrutura do Projeto
+
+- `app/` - Código backend Laravel (controllers, models, etc.)
+- `resources/js/` - Código frontend React (componentes, páginas, hooks)
+- `routes/` - Rotas Laravel
+- `database/` - Migrations, seeders e factories
+
+## Funcionalidades
+
+- Autenticação de usuários
+- Gerenciamento de produtos (CRUD)
+- Perfil de usuário e configurações
+- Interface moderna e responsiva
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
